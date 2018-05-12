@@ -1,0 +1,16 @@
+#.PHONY:all #同时编译多个文件
+#all:test1 test2 #编译文件后生成的文件名
+#test1:test1.c test.c #编译文件test.c 头文件test.h
+#	gcc -o $@ $^ #编译所有
+#test2:test2.c test.c
+#	gcc -o $@ $^ 
+#.PHONY:clean
+#clean:#删除文件
+#	rm -f test1 test2 
+
+
+wait: wait.c
+	gcc wait.c -o wait
+.PHONY:clean
+clean:
+	rm -f wait
